@@ -1,12 +1,13 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
+import logo from "../assets/img/techmart_logo.png";
 
 const NavBar = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light p-4 fs-4">
+    <nav className="navbar navbar-expand-lg navbar-light bg-light fs-5 mb-4">
       <div className="container-fluid">
-        <Link className="navbar-brand" to="#">
-          Tech-Mart
+        <Link className="navbar-brand mx-3" to="/home">
+          <img src={logo} style={{ width: "120px" }} alt="logo" />
         </Link>
         <button
           className="navbar-toggler"
@@ -22,22 +23,26 @@ const NavBar = () => {
         <div className="collapse navbar-collapse" id="navbarText">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <NavLink className="nav-link" aria-current="page" to="#">
-                Home
+              <NavLink
+                className="nav-link mx-2"
+                aria-current="page"
+                to="/products"
+              >
+                Products
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="#">
+              <NavLink className="nav-link mx-2" to="#">
                 Features
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="#">
+              <NavLink className="nav-link mx-2" to="#">
                 Pricing
               </NavLink>
             </li>
           </ul>
-          <NavLink className="nav-lin" to="#">
+          <NavLink className="nav-link mx-2" to="/login">
             Login
           </NavLink>
         </div>
