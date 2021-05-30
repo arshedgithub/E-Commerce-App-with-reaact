@@ -1,6 +1,8 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import logo from "../assets/img/techmart_logo.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUser } from "@fortawesome/free-solid-svg-icons";
 
 const NavBar = () => {
   return (
@@ -43,7 +45,7 @@ const NavBar = () => {
             </li>
           </ul>
           <NavLink className="nav-link mx-2" to="/login">
-            Login
+            <FontAwesomeIcon icon={faUser} /> Login
           </NavLink>
         </div>
       </div>
