@@ -1,26 +1,30 @@
 import React, { Component } from "react";
-import { getItems } from "./../services/fakeDB";
+import { getItems, getTitles } from "./../services/fakeDB";
+import ListGroup from "./common/listGroup";
+import Item from "./common/item";
 
 class Products extends Component {
   state = {
-    products: [],
+    items: [],
+    categories: [],
   };
 
   componentDidMount() {
-    this.setState({ products: getItems() });
+    this.setState({ items: getItems(), categories: getTitles() });
   }
 
   render() {
-    const items = this.state.products;
+    const { items, categories } = this.state;
     return (
       <div className="row">
-        <div className="col-1 text-center">sidebar</div>
+        <div className="col-3">
+          <ListGroup categories={categories} />
+        </div>
         <div className="col">
           <p>Showing {items.length} products</p>
           {items.map((item) => (
-            <div>
-              <div>{item._id}</div>
-              <div>{item.title}</div>
+            <div key={item._id}>
+              <Item item={item} />
             </div>
           ))}
         </div>
