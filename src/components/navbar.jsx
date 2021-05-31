@@ -6,7 +6,7 @@ import { faUser } from "@fortawesome/free-solid-svg-icons";
 
 const NavBar = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light fs-5 mb-4">
+    <nav className="navbar navbar-expand-lg navbar-light bg-light fs-5 p-0 fixed-top">
       <div className="container-fluid">
         <Link className="navbar-brand mx-3" to="/home">
           <img src={logo} style={{ width: "120px" }} alt="logo" />

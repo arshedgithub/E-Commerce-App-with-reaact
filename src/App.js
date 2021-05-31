@@ -6,6 +6,7 @@ import NotFound from './components/NotFound';
 import Home from './components/home';
 import Products from './components/products';
 import './App.css';
+import Footer from './components/footer';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Redirect to="/not-found" />
         </Switch>
       </main>
+      <Footer />
     </React.Fragment>
 
   );

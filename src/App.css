@@ -2,8 +2,9 @@
   text-align: center;
 }
 
-.container {
+main.container {
   max-width: 100% !important;
+  margin-top: 100px;
 }
 
 .App-logo {

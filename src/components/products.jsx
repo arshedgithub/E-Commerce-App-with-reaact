@@ -3,22 +3,36 @@ import { getItems, getTitles } from "./../services/fakeDB";
 import ListGroup from "./common/listGroup";
 import Item from "./common/item";
 import Pagination from "./common/pagination";
+import { paginate } from "../utils/paginate";
+import Footer from "./footer";
 
 class Products extends Component {
   state = {
-    items: [],
+    products: [],
     categories: [],
     currentPage: 1,
-    pageSize: 2,
+    pageSize: 3,
   };
 
   componentDidMount() {
-    this.setState({ items: getItems(), categories: getTitles() });
+    this.setState({ products: getItems(), categories: getTitles() });
   }
 
+  handlePageChange = (page) => {
+    this.setState({ currentPage: page });
+  };
+
+  getPagedData = () => {
+    const { products, currentPage, pageSize } = this.state;
+
+    const items = paginate(products, currentPage, pageSize);
+    return items;
+  };
+
   render() {
-    const { items, categories, currentPage, pageSize } = this.state;
-    const totalCount = items.length;
+    const { products, categories, currentPage, pageSize } = this.state;
+    const totalCount = products.length;
+    const items = this.getPagedData();
 
     return (
       <div className="row">
@@ -36,6 +50,7 @@ class Products extends Component {
             currentPage={currentPage}
             totalCount={totalCount}
             pageSize={pageSize}
+            onPageChange={this.handlePageChange}
           />
         </div>
       </div>
