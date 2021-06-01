@@ -10,33 +10,48 @@ class Products extends Component {
     products: [],
     categories: [],
     currentPage: 1,
-    pageSize: 3,
+    pageSize: 4,
   };
 
   componentDidMount() {
-    this.setState({ products: getItems(), categories: getTitles() });
+    this.setState({
+      products: getItems(),
+      categories: [{ _id: "", name: "All Categories" }, ...getTitles()],
+    });
   }
+
+  handleCategorySelect = (category) => {
+    this.setState({ selectedCategory: category, currentPage: 1 });
+  };
 
   handlePageChange = (page) => {
     this.setState({ currentPage: page });
   };
 
   getPagedData = () => {
-    const { products, currentPage, pageSize } = this.state;
+    const { products, currentPage, pageSize, selectedCategory } = this.state;
 
-    const items = paginate(products, currentPage, pageSize);
-    return items;
+    const filtered =
+      selectedCategory && selectedCategory._id
+        ? products.filter((c) => c.title[0] === selectedCategory._id)
+        : products;
+
+    const items = paginate(filtered, currentPage, pageSize);
+    return { totalCount: filtered.length, items };
   };
 
   render() {
-    const { products, categories, currentPage, pageSize } = this.state;
-    const totalCount = products.length;
-    const items = this.getPagedData();
+    const { categories, currentPage, pageSize } = this.state;
+    const { totalCount, items } = this.getPagedData();
 
     return (
       <div className="row">
         <div className="col-3">
-          <ListGroup categories={categories} />
+          <ListGroup
+            categories={categories}
+            onCategorySelect={this.handleCategorySelect}
+            selectedCategory={this.state.selectedCategory}
+          />
         </div>
         <div className="col">
           <p>Showing {totalCount} products</p>
