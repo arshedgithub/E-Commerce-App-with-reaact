@@ -14,9 +14,9 @@ const Footer = () => {
   };
 
   return (
-    <div class="footer py-2 bg-secondary text-light">
+    <div className="footer py-2 bg-secondary text-light">
       <div className="footer-content mx-5">
-        <div class="container row">
+        <div className="container row">
           <div className="col-5 p-3">
             <h4>Follow us</h4>
             <ul className="list-inline follow-list">

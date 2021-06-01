@@ -1,10 +1,6 @@
 import React from "react";
 
-const ListGroup = ({ categories }) => {
-  //   const logging = (category) => {
-  //     console.log(category);
-  //   };
-
+const ListGroup = ({ categories, onCategorySelect, selectedCategory }) => {
   return (
     <div>
       <ul className="list-group m-2">
@@ -12,7 +8,12 @@ const ListGroup = ({ categories }) => {
           return (
             <li
               key={category._id}
-              className="list-group-item list-group-action text-center"
+              onClick={() => onCategorySelect(category)}
+              className={
+                category === selectedCategory
+                  ? "list-group-item list-group-action text-center py-3 active"
+                  : "list-group-item list-group-action text-center py-3"
+              }
             >
               {category.name}
             </li>
