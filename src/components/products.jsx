@@ -4,7 +4,6 @@ import ListGroup from "./common/listGroup";
 import Item from "./common/item";
 import Pagination from "./common/pagination";
 import { paginate } from "../utils/paginate";
-import Footer from "./footer";
 
 class Products extends Component {
   state = {
