@@ -143,9 +143,9 @@ const items = [
 
 const titles = [
     { _id: "lp", name: "Laptops" },
-    { _id: "pc", name: "PC computers" },
+    { _id: "mp", name: "Mobile Phones" },
     { _id: "tb", name: "Tablets" },
-    { _id: "mp", name: "Mobile Phones" }
+    { _id: "pc", name: "PC computers" }
 ];
 
 export function getItems() {

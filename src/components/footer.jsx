@@ -72,7 +72,7 @@ const Footer = () => {
           </div>
         </div>
         <hr />
-        <div class="text-center">Copyright &copy; Arshed Ahmed</div>
+        <div className="text-center">Copyright &copy; Arshed Ahmed</div>
       </div>
     </div>
   );

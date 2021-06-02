@@ -2,7 +2,7 @@ import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import logo from "../assets/img/techmart_logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser } from "@fortawesome/free-solid-svg-icons";
+import { faUser, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
 const NavBar = () => {
   return (
@@ -44,6 +44,9 @@ const NavBar = () => {
               </NavLink>
             </li>
           </ul>
+          <NavLink className="nav-link mx-2" to="/cart">
+            <FontAwesomeIcon icon={faShoppingCart} />
+          </NavLink>
           <NavLink className="nav-link mx-2" to="/login">
             <FontAwesomeIcon icon={faUser} /> Login
           </NavLink>
