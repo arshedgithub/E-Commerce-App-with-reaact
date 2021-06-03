@@ -26,7 +26,7 @@ const App = () => {
       <main className="container min-vh-100">
         <Switch>
           <Route path="/home" component={Home} />
-          <Route path="/products" render={() => <Products onMainState={() => handleMainState()} />} />
+          <Route path="/products" render={() => <Products onMainState={handleMainState} />} />
           <Route path='/about' component={About} />
           <Route path='/contact' component={Contact} />
           <Route path="/login" component={LoginForm} />

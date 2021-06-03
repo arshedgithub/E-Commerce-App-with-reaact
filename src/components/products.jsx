@@ -12,7 +12,8 @@ const Products = ({ onMainState }) => {
     ...getTitles(),
   ]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [pageSize, setPageSize] = useState(4);
+  //   const [pageSize, setPageSize] = useState(4);
+  const pageSize = 4;
   const [selectedCategory, setSelectedCategory] = useState();
   const [selectedItem, setSelectedItem] = useState();
 
