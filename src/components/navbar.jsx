@@ -44,7 +44,7 @@ const NavBar = () => {
               </NavLink>
             </li>
           </ul>
-          <NavLink className="nav-link mx-2" to="/cart">
+          <NavLink className="nav-link" to="/cart">
             <FontAwesomeIcon icon={faShoppingCart} />
           </NavLink>
           <NavLink className="nav-link mx-2" to="/login">

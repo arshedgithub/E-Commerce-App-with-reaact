@@ -16,11 +16,6 @@ const Products = ({ onMainState }) => {
   const [selectedCategory, setSelectedCategory] = useState();
   const [selectedItem, setSelectedItem] = useState();
 
-  useEffect(() => {
-    // setProducts(getItems());
-    // setCategories([{ _id: "", name: "All Categories" }, ...getTitles()]);
-  });
-
   const handleCategorySelect = (category) => {
     setSelectedCategory(category);
     setCurrentPage(1);

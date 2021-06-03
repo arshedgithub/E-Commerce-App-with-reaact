@@ -9,6 +9,7 @@ import About from './components/about';
 import Contact from './components/contact';
 import Footer from './components/footer';
 import Cart from './components/cart';
+import Register from './components/registerForm';
 import './App.css';
 import { render } from '@testing-library/react';
 import { useState } from 'react';
@@ -29,6 +30,7 @@ const App = () => {
           <Route path='/about' component={About} />
           <Route path='/contact' component={Contact} />
           <Route path="/login" component={LoginForm} />
+          <Route path="/register" component={Register} />
           <Route path="/cart" component={Cart} />
           <Route path="/not-found" component={NotFound} />
           <Redirect from="/" exact to="/home" />

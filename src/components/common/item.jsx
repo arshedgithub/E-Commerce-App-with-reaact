@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Item = ({ item, onSelectItem }) => {
   return (
-    <div className="row border rounded py-1 m-2 mx-4">
+    <div className="row border border-2 rounded py-1 m-2 mx-4">
       <div className="col m-3">
         <p>{item.name}</p>
         <p>
@@ -14,7 +14,7 @@ const Item = ({ item, onSelectItem }) => {
         </p>
         <Link to="/cart">
           <button
-            className="btn btn-sm btn-primary"
+            className="btn btn-sm btn-secondary"
             onClick={() => onSelectItem(item._id)}
           >
             Add to Cart
