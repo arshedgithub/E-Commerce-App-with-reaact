@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Redirect, Switch } from 'react-router';
+import { Route, Redirect, Switch } from 'react-router-dom';
 import NavBar from "./components/navbar";
 import LoginForm from "./components/loginForm";
 import NotFound from './components/NotFound';
@@ -11,22 +11,15 @@ import Footer from './components/footer';
 import Cart from './components/cart';
 import Register from './components/registerForm';
 import './App.css';
-import { render } from '@testing-library/react';
-import { useState } from 'react';
 
 const App = () => {
-  // const [selected, setSelected] = useState9
-
-  const handleMainState = (selected) => {
-    console.log(selected);
-  }
   return (
     <React.Fragment>
       <NavBar />
       <main className="container min-vh-100">
         <Switch>
           <Route path="/home" component={Home} />
-          <Route path="/products" render={() => <Products onMainState={handleMainState} />} />
+          <Route path="/products" component={Products} />
           <Route path='/about' component={About} />
           <Route path='/contact' component={Contact} />
           <Route path="/login" component={LoginForm} />

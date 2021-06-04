@@ -4,18 +4,15 @@ import ListGroup from "./common/listGroup";
 import Item from "./common/item";
 import Pagination from "./common/pagination";
 import { paginate } from "../utils/paginate";
+import { useHistory } from "react-router-dom";
 
-const Products = ({ onMainState }) => {
-  const [products, setProducts] = useState([...getItems()]);
-  const [categories, setCategories] = useState([
-    { _id: "", name: "All Categories" },
-    ...getTitles(),
-  ]);
-  const [currentPage, setCurrentPage] = useState(1);
-  //   const [pageSize, setPageSize] = useState(4);
+const Products = () => {
+  let history = useHistory();
+  const products = [...getItems()];
+  const categories = [{ _id: "", name: "All Categories" }, ...getTitles()];
   const pageSize = 4;
+  const [currentPage, setCurrentPage] = useState(1);
   const [selectedCategory, setSelectedCategory] = useState();
-  const [selectedItem, setSelectedItem] = useState();
 
   const handleCategorySelect = (category) => {
     setSelectedCategory(category);
@@ -26,11 +23,10 @@ const Products = ({ onMainState }) => {
     setCurrentPage(page);
   };
 
-  const handleSelectItem = (selectedItemId) => {
-    const selectedItem = products.filter((t) => t._id === selectedItemId);
-    setSelectedItem(selectedItem);
+  const handleSelectItem = (item) => {
+    const selectedItem = products.filter((t) => t._id === item._id);
+    history.push("/cart", { data: item });
     console.log(selectedItem);
-    onMainState(selectedItem);
   };
 
   const getPagedData = () => {

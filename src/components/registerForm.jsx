@@ -9,9 +9,9 @@ class Register extends Form {
         <h2>Registeration</h2>
         <form style={{ maxWidth: "70vh" }} onSubmit={this.handleSubmit}>
           {this.renderInput("name", "Name")}
-          {this.renderInput("email", "Email")}
           {this.renderInput("username", "Username")}
           {this.renderInput("password", "Password", "password")}
+          {this.renderInput("email", "Email")}
           <Link to="/products">{this.renderButton("Register")}</Link>
         </form>
       </div>
