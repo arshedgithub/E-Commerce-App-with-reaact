@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useHistory } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebookSquare,
@@ -38,9 +38,9 @@ const Footer = () => {
             <h5>Help & Support</h5>
             <div className="about-list">
               <NavLink
-                onClick={scrollToTop()}
                 className="nav-link text-light"
                 to="/contact"
+                onClick={scrollToTop()}
               >
                 Contact us
               </NavLink>
@@ -56,9 +56,9 @@ const Footer = () => {
             <h5>About us</h5>
             <div className="about-list">
               <NavLink
-                onClick={scrollToTop()}
                 className="nav-link text-light"
                 to="/about"
+                onClick={scrollToTop()}
               >
                 About us
               </NavLink>
@@ -72,7 +72,7 @@ const Footer = () => {
           </div>
         </div>
         <hr />
-        <div class="text-center">Copyright &copy; Arshed Ahmed</div>
+        <div className="text-center">Copyright &copy; Arshed Ahmed</div>
       </div>
     </div>
   );
