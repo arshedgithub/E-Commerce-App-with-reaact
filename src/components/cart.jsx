@@ -1,4 +1,3 @@
-import { has } from "lodash";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import CartItem from "./common/cartItem";
@@ -6,13 +5,22 @@ import CartItem from "./common/cartItem";
 let cartItems = [];
 
 const Cart = ({ location }) => {
+  let quantity = 1;
   if (location.state) {
     let element = location.state.data;
+    // if (element._id === )
+    cartItems.find((t) => {
+      if (t._id === element._id) {
+        quantity++;
+        console.log(quantity);
+        return;
+      }
+    });
     cartItems.push(element);
   }
   console.log(cartItems);
 
-  if (cartItems.length == 0) {
+  if (cartItems.length === 0) {
     return (
       <div className="text-center">
         <h5>You didn't add anything yet</h5>
@@ -44,7 +52,11 @@ const Cart = ({ location }) => {
         <tbody>
           {cartItems.map((item) => (
             <tr key={item._id}>
-              <CartItem item={item} onDelete={handleDelete} />
+              <CartItem
+                item={item}
+                quantity={quantity}
+                onDelete={handleDelete}
+              />
             </tr>
           ))}
         </tbody>

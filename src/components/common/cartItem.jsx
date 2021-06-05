@@ -2,12 +2,12 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 
-const CartItem = ({ item, onDelete }) => {
+const CartItem = ({ item, quantity, onDelete }) => {
   return (
     <React.Fragment>
       <td>{item._id} </td>
       <td>{item.name}</td>
-      <td>1</td>
+      <td>{quantity}</td>
       <td>{item.price}</td>
       <td>{item.price}</td>
       <td onClick={() => onDelete(item._id)}>

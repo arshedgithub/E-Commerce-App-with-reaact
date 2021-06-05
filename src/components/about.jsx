@@ -10,7 +10,7 @@ const About = () => {
         What is <img src={logo} className="w-25" alt="logo" /> &nbsp;?
       </h4>
       <p>
-        <b>TechMart</b> is a website where you can buy IT products. The best
+        <b> TechMart</b> is a website where you can buy IT products. The best
         deals...............
       </p>
       <p>
