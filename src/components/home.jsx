@@ -13,12 +13,12 @@ const Home = () => {
           <img src={bg1} className="w-100" alt="background" />
         </div>
         <div className="col text-center">
-          <h5 className="home mt-5">
+          <h6 className="home mt-5">
             Larges laptop store in Sri Lanka. <br />
             Best prices & Leading branded <br />
             Desktops, Laptops, Tablets, <br /> Mobile phones and Other IT
             products
-          </h5>
+          </h6>
           <Link to="/products">
             <button className="btn btn-primary px-4 my-5">Shop Now</button>
           </Link>

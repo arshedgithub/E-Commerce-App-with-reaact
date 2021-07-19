@@ -20,6 +20,11 @@ const Cart = ({ location }) => {
   }
   console.log(cartItems);
 
+  const handleDelete = (ID) => {
+    cartItems = cartItems.filter((t) => t._id !== ID);
+    console.log(cartItems);
+  };
+
   if (cartItems.length === 0) {
     return (
       <div className="text-center">
@@ -30,11 +35,6 @@ const Cart = ({ location }) => {
       </div>
     );
   }
-
-  const handleDelete = (ID) => {
-    cartItems = cartItems.filter((t) => t._id !== ID);
-    console.log(cartItems);
-  };
 
   return (
     <div className="text-center m-5">

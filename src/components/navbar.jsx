@@ -5,9 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
 const NavBar = () => {
-  const scrollToTop = () => {
-    window.scrollTo(0, 0);
-  };
+  const scrollToTop = () => window.scrollTo(0, 0);
 
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light fs-5 p-0 fixed-top">
@@ -16,13 +14,13 @@ const NavBar = () => {
           <img src={logo} style={{ width: "120px" }} alt="logo" />
         </Link>
         <button
-          className="navbar-toggler"
+          className="navbar-toggler bg-primary"
           type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarText"
-          aria-controls="navbarText"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
+          // data-bs-toggle="collapse"
+          // data-bs-target="#navbarText"
+          // aria-controls="navbarText"
+          // aria-expanded="false"
+          // aria-label="Toggle navigation"
         >
           <span className="navbar-toggler-icon"></span>
         </button>

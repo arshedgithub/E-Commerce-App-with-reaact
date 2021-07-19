@@ -18,7 +18,12 @@ const About = () => {
         other........
       </p>
       <p>
-        bla bla bla <br /> bla bla bla
+        Lorem ipsum dolor sit amet, consul conceptam mei ei, vis omnes dicant
+        dissentiet cu. Vis et munere principes constituam, mei ei iriure
+        fabulas. Tibique interesset ei eum, mea causae abhorreant an. Iudico
+        scaevola contentiones his ut, animal intellegat mel an, aliquip corpora
+        eam ad. Dicant quaeque eos no, at inani movet persius vim. Sit erat
+        dicat forensibus id.
       </p>
       <p>
         If you'd like to get in touch with us, go to{" "}

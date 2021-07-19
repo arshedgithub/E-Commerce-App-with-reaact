@@ -10,7 +10,7 @@ const CartItem = ({ item, quantity, onDelete }) => {
       <td>{quantity}</td>
       <td>{item.price}</td>
       <td>{item.price}</td>
-      <td onClick={() => onDelete(item._id)}>
+      <td style={{ cursor: "pointer" }} onClick={() => onDelete(item._id)}>
         <FontAwesomeIcon icon={faTrashAlt} />
       </td>
     </React.Fragment>
