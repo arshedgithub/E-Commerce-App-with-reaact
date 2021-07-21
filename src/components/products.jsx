@@ -27,7 +27,6 @@ const Products = () => {
     const selectedItem = products.filter((t) => t._id === item._id);
     history.push("/cart", { data: item });
     window.scrollTo(0, 0);
-    console.log(selectedItem);
   };
 
   const getPagedData = () => {

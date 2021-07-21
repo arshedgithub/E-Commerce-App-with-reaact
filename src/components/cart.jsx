@@ -15,11 +15,9 @@ const Cart = ({ location }) => {
     // else quantity = quantity;
     cartItems.push(element);
   }
-  console.log(cartItems);
 
   const handleDelete = (ID) => {
     cartItems = cartItems.filter((t) => t._id !== ID);
-    console.log(cartItems);
   };
 
   if (cartItems.length === 0) {
