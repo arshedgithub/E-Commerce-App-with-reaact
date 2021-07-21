@@ -3,6 +3,8 @@ import logo from "../assets/img/techmart_logo.png";
 import { Link } from "react-router-dom";
 
 const About = () => {
+  const scrollToTop = () => window.scrollTo(0, 0);
+
   return (
     <div className="mx-5 p-4">
       <h1 className="my-4">About us</h1>
@@ -27,7 +29,10 @@ const About = () => {
       </p>
       <p>
         If you'd like to get in touch with us, go to{" "}
-        <Link to="/contact">Contact us</Link> .
+        <Link to="/contact" onClick={scrollToTop}>
+          Contact us
+        </Link>{" "}
+        .
       </p>
     </div>
   );

@@ -15,23 +15,6 @@ const Footer = () => {
     <div className="footer py-2 bg-secondary text-light">
       <div className="footer-content mx-3">
         <div className="d-flex flex-wrap">
-          <div className="p-4 me-2 bd-highlight">
-            <h4>Follow us</h4>
-            <ul className="list-inline follow-list">
-              <li className="list-inline-item p-1">
-                <FontAwesomeIcon icon={faFacebookSquare} size="2x" />
-              </li>
-              <li className="list-inline-item p-1">
-                <FontAwesomeIcon icon={faTwitter} size="2x" />
-              </li>
-              <li className="list-inline-item p-1">
-                <FontAwesomeIcon icon={faInstagramSquare} size="2x" />
-              </li>
-              <li className="list-inline-item p-1">
-                <FontAwesomeIcon icon={faFacebookMessenger} size="2x" />
-              </li>
-            </ul>
-          </div>
           <div className="p-4 bd-highlight">
             <h5>Help & Support</h5>
             <div className="about-list">
@@ -67,6 +50,23 @@ const Footer = () => {
                 Privacy & Policy
               </NavLink>
             </div>
+          </div>
+          <div className="p-4 bd-highlight">
+            <h4>Follow us</h4>
+            <ul className="list-inline follow-list">
+              <li className="list-inline-item p-1">
+                <FontAwesomeIcon icon={faFacebookSquare} size="2x" />
+              </li>
+              <li className="list-inline-item p-1">
+                <FontAwesomeIcon icon={faTwitter} size="2x" />
+              </li>
+              <li className="list-inline-item p-1">
+                <FontAwesomeIcon icon={faInstagramSquare} size="2x" />
+              </li>
+              <li className="list-inline-item p-1">
+                <FontAwesomeIcon icon={faFacebookMessenger} size="2x" />
+              </li>
+            </ul>
           </div>
         </div>
         <hr />

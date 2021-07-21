@@ -6,16 +6,13 @@ let cartItems = [];
 
 const Cart = ({ location }) => {
   let quantity = 1;
+
   if (location.state) {
     let element = location.state.data;
-    // if (element._id === )
-    cartItems.find((t) => {
-      if (t._id === element._id) {
-        quantity++;
-        console.log(quantity);
-        return;
-      }
-    });
+
+    const selected = cartItems.find((t) => t._id === element._id);
+    // if (selected) quantity++;
+    // else quantity = quantity;
     cartItems.push(element);
   }
   console.log(cartItems);
@@ -63,6 +60,9 @@ const Cart = ({ location }) => {
       </table>
       <Link to="/products">
         <button className="btn btn-primary my-4">Add item</button>
+      </Link>
+      <Link to="/login">
+        <button className="btn btn-primary px-4 my-4 mx-2">Pay</button>
       </Link>
     </div>
   );
